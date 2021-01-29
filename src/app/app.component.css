@@ -1,0 +1,58 @@
+#main-contnent {
+  padding: 10px;
+  background-color: #afafaf;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#content {
+  border-radius: 10px;
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+  background-color: #303030;
+  font-size: 25px;
+  color: #e7e7e7;
+}
+
+#message-input {
+  width: 50vh;
+}
+
+button {
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  transform: translateY(0);
+}
+
+button:hover {
+  cursor: pointer;
+  animation: hoverButton 0.5s;
+  transform: translateY(-5px);
+}
+
+@keyframes hoverButton {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #message-input {
+    width: 30vh;
+  } 
+}
+
+@media only screen and (max-width: 500px) {
+  #message-input {
+    width: 15vh;
+  } 
+}

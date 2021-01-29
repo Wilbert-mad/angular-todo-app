@@ -1,0 +1,20 @@
+<div id="main-contnent">
+  <div id="content">
+    <span>
+      <input type="text" [(ngModel)]="content" (change)="inputReady()" id="message-input" />
+    </span>
+    <br /><br />
+    <div *ngIf="list.items.length <= 0">
+      <h1>No Itmes left..! Add more?</h1>
+    </div>
+    <div *ngFor="let item of list.items">
+      <span>{{ item.content }}</span> {{' '}} <input type="checkbox" [(ngModel)]="item.done" [checked]="item.done">
+    </div>
+    <br />
+    <div>
+      <button (click)="finished()">Finished</button> {{' '}}
+      <button (click)="list.items = []">Clear all</button> {{' '}}
+      <button (click)="unCheckAll()">Uncheck all</button>
+    </div>
+  </div>
+</div>
